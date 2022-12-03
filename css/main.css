@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Red Hat Display", sans-serif;
+  background-image: url("../images/pattern-background-desktop.svg");
+  background-size: cover;
+  background-position: 0 -100px;
+  background-repeat: no-repeat;
+  background-color: hsl(225deg, 100%, 94%);
+}
+
+.card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 700px;
+  background-color: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.card .text {
+  height: 100%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
+.card .text h1 {
+  font-size: 30px;
+}
+.card .text p {
+  padding: 0 25px;
+  font-weight: 500;
+  color: hsl(224deg, 23%, 55%);
+}
+.card .text .plan {
+  position: relative;
+  height: 110px;
+  padding: 20px;
+  width: 100%;
+  background-color: hsl(225deg, 100%, 98%);
+  border-radius: 20px;
+}
+.card .text .plan .title {
+  position: absolute;
+  top: 50%;
+  left: 100px;
+  transform: translate(0, -50%);
+  font-size: 14px;
+  text-align: left;
+  line-height: 25px;
+}
+.card .text .plan .title h2 {
+  color: hsl(223deg, 47%, 23%);
+  font-size: 17px;
+  font-weight: 900;
+}
+.card .text .plan .title h3 {
+  color: hsl(224deg, 23%, 55%);
+  font-size: 17px;
+  font-weight: 500;
+}
+.card .text .plan img {
+  position: absolute;
+  top: 50%;
+  left: 25px;
+  transform: translate(0, -50%);
+  width: 55px;
+}
+.card .text .plan p {
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  transform: translate(0, -50%);
+  color: hsl(245deg, 75%, 52%);
+  font-weight: bold;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.card .text .plan p:hover {
+  color: #776cf0;
+  text-decoration: none;
+}
+.card .text .btns {
+  display: flex;
+  flex-direction: column;
+}
+.card .text .btns button {
+  padding: 18px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.card .text .btns .pay {
+  color: #fff;
+  background-color: hsl(245deg, 75%, 52%);
+  box-shadow: 0 15px 15px rgba(56, 41, 224, 0.2);
+  font-weight: 900;
+  font-size: 16px;
+  font-family: "Red Hat Display", sans-serif;
+  transition: background-color 0.1s;
+}
+.card .text .btns .pay:hover {
+  background-color: #776cf0;
+}
+.card .text .btns .cancel {
+  background: none;
+  color: hsl(224deg, 23%, 55%);
+  font-weight: 900;
+  font-size: 16px;
+  font-family: "Red Hat Display", sans-serif;
+  transition: color 0.1s;
+}
+.card .text .btns .cancel:hover {
+  color: #000;
+}
+
+@media (min-width: 576px) {
+  .card {
+    transform: translate(-50%, -50%) scale(1);
+    width: 450px;
+  }
+  .card .text .btns button {
+    margin-bottom: 10px;
+  }
+}/*# sourceMappingURL=main.css.map */

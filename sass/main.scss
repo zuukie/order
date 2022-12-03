@@ -1,0 +1,142 @@
+@use "./color" as c;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-size: 16px;
+	font-family: "Red Hat Display", sans-serif;
+	background-image: url("../images/pattern-background-desktop.svg");
+	background-size: cover;
+	background-position: 0 -100px;
+	background-repeat: no-repeat;
+	background-color: c.$paleblue;
+}
+
+.card {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0.8);
+	display: flex;
+	flex-direction: column;
+	width: 400px;
+	height: 700px;
+	background-color: #fff;
+	border-radius: 20px;
+	overflow: hidden;
+	.text {
+		height: 100%;
+		padding: 40px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		text-align: center;
+		h1 {
+			font-size: 30px;
+		}
+		p {
+			padding: 0 25px;
+			font-weight: 500;
+			color: c.$desaturated;
+		}
+		.plan {
+			position: relative;
+			height: 110px;
+			padding: 20px;
+			width: 100%;
+			background-color: c.$paleblue2;
+			border-radius: 20px;
+			.title {
+				position: absolute;
+				top: 50%;
+				left: 100px;
+				transform: translate(0, -50%);
+				font-size: 14px;
+				text-align: left;
+				line-height: 25px;
+				h2 {
+					color: c.$darkblue;
+					font-size: 17px;
+					font-weight: 900;
+				}
+				h3 {
+					color: c.$desaturated;
+					font-size: 17px;
+					font-weight: 500;
+				}
+			}
+			img {
+				position: absolute;
+				top: 50%;
+				left: 25px;
+				transform: translate(0, -50%);
+				width: 55px;
+			}
+			p {
+				position: absolute;
+				top: 50%;
+				right: 0px;
+				transform: translate(0, -50%);
+				color: c.$brightblue;
+				font-weight: bold;
+				text-decoration: underline;
+				cursor: pointer;
+			}
+			p:hover {
+				color: #776cf0;
+				text-decoration: none;
+			}
+		}
+		.btns {
+			display: flex;
+			flex-direction: column;
+			button {
+				padding: 18px;
+				border: none;
+				border-radius: 10px;
+				cursor: pointer;
+			}
+			.pay {
+				color: #fff;
+				background-color: c.$brightblue;
+				box-shadow: 0 15px 15px rgba(56, 41, 224, 0.2);
+				font-weight: 900;
+				font-size: 16px;
+				font-family: "Red Hat Display", sans-serif;
+				transition: background-color 0.1s;
+			}
+			.pay:hover {
+				background-color: #776cf0;
+			}
+			.cancel {
+				background: none;
+				color: c.$desaturated;
+				font-weight: 900;
+				font-size: 16px;
+				font-family: "Red Hat Display", sans-serif;
+				transition: color 0.1s;
+			}
+			.cancel:hover {
+				color: #000;
+			}
+		}
+	}
+}
+
+@media (min-width: 576px) {
+	.card {
+		transform: translate(-50%, -50%) scale(1);
+		width: 450px;
+		.text {
+			.btns {
+				button {
+					margin-bottom: 10px;
+				}
+			}
+		}
+	}
+}
